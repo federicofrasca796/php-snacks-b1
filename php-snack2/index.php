@@ -16,7 +16,7 @@ if ($name_len > 3) {
     echo '<br>';
 
 };
-
+$name_check = $name_len > 3;
 
 //Mail Check
 $split_mail = str_split($mail);
@@ -28,6 +28,8 @@ if (in_array('.', $split_mail) && in_array('@', $split_mail)) {
     echo '<br>';
 };
 
+$mail_check = in_array('.', $split_mail) && in_array('@', $split_mail);
+
 //Age check
 if (is_numeric($age)){
     echo 'Age is a number.';
@@ -36,6 +38,15 @@ if (is_numeric($age)){
     echo 'Age is NOT a number';
     echo '<br>';
 }
+
+$age_check = is_numeric($age);
+// var_dump ($age_check, $mail_check, $name_check);
+
+if ($name_check && $mail_check && $age_check){
+    echo '<h1>ACCESSO RIUSCITO</h1>';
+} else {
+    echo '<h1>ACCESSO NEGATO</h1>';
+};
 
 
 ?>
