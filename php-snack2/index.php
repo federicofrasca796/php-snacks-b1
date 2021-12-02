@@ -19,17 +19,24 @@ if ($name_len > 3) {
 
 
 //Mail Check
-
 $split_mail = str_split($mail);
 if (in_array('.', $split_mail) && in_array('@', $split_mail)) {
     echo 'The mail you typed is valid';
     echo '<br>';
-
 } else {
     echo 'The mail you typed is NOT valid';
     echo '<br>';
-
 };
+
+//Age check
+if (is_numeric($age)){
+    echo 'Age is a number.';
+    echo '<br>';
+} else {
+    echo 'Age is NOT a number';
+    echo '<br>';
+}
+
 
 ?>
 
