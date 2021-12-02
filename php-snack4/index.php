@@ -3,8 +3,12 @@ Creare un array con 15 numeri casuali, tenendo conto che l’array non dovrà co
 <?php
     $rnd_array = [];
 
-    for ($i=0; $i < 15; $i++) { 
-        array_push($rnd_array, rand(1,99));
+    for ($i=0; $i < 15; $i++) {
+        $rnd_num = rand(1,99);
+        
+        if (!in_array($rnd_num, $rnd_array)) {
+            array_push($rnd_array, $rnd_num);
+        };
     };
     // var_dump($rnd_array[0]);
     
