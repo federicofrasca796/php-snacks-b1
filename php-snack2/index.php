@@ -6,11 +6,29 @@ $name = $_GET['name'];
 $mail = $_GET['mail'];
 $age = $_GET['age'];
 
+//Name check
 $name_len = strlen($name);
 if ($name_len > 3) {
     echo 'Your name is LONGER than 3 characters. Noice.';
+    echo '<br>';
 } else {
     echo 'Your name is SHORTER than 3 characters. What a short name.';
+    echo '<br>';
+
+};
+
+
+//Mail Check
+
+$split_mail = str_split($mail);
+if (in_array('.', $split_mail) && in_array('@', $split_mail)) {
+    echo 'The mail you typed is valid';
+    echo '<br>';
+
+} else {
+    echo 'The mail you typed is NOT valid';
+    echo '<br>';
+
 };
 
 ?>
