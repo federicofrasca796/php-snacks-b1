@@ -42,11 +42,7 @@ if (is_numeric($age)){
 $age_check = is_numeric($age);
 // var_dump ($age_check, $mail_check, $name_check);
 
-if ($name_check && $mail_check && $age_check){
-    echo '<h1>ACCESSO RIUSCITO</h1>';
-} else {
-    echo '<h1>ACCESSO NEGATO</h1>';
-};
+
 
 
 ?>
@@ -60,6 +56,12 @@ if ($name_check && $mail_check && $age_check){
     <title>snack 2</title>
 </head>
 <body>
-    
+    <?php
+    if ($name_check && $mail_check && $age_check){
+        echo '<h1>ACCESSO RIUSCITO</h1>';
+    } else {
+        echo '<h1>ACCESSO NEGATO</h1>';
+    };
+    ?>
 </body>
 </html>
