@@ -8,9 +8,9 @@ $age = $_GET['age'];
 
 $name_len = strlen($name);
 if ($name_len > 3) {
-    echo 'Your name is LONGER than 3 characters. Noice.'
+    echo 'Your name is LONGER than 3 characters. Noice.';
 } else {
-    echo 'Your name is SHORTER than 3 characters. What a short name.'
+    echo 'Your name is SHORTER than 3 characters. What a short name.';
 };
 
 ?>
