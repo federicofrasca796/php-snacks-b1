@@ -33,10 +33,8 @@ $ads = [
 ];
 
 /* foreach ($ads as $key => $value) {
-    // $value['is_active'] = false;
+    $value['is_active'] = false;
     // var_dump($value['is_active']);
-    echo 
-
 }; */
 
 ?>
@@ -50,11 +48,15 @@ $ads = [
     <title>snack 1 b2</title>
 </head>
 <body>
-    <?php foreach ($ads as $key => $value) : ?>
+    <?php foreach ($ads as $key => $value) : 
+        $value['is_active'] = false;
+        var_dump(shuffle($value['is_active']) = true);
+        ?>
         <?php if ($value['is_active'] === true) {?>
             <div class="adv">
+                <a href="<?=$value['link'];?>">
                 <img src="<?=$value['image_path'];?>" alt="">
-                <a href="<?=$value['link'];?>">ADVERTISEMENT N.<?=$key + 1?></a>
+                ADVERTISEMENT N.<?=$key + 1?></a>
             </div>
         <?php }; ?>
     <?php endforeach ?>
