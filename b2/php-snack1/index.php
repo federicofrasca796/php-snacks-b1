@@ -32,11 +32,12 @@ $ads = [
 
 ];
 
-foreach ($ads as $key => $value) {
+/* foreach ($ads as $key => $value) {
     // $value['is_active'] = false;
     // var_dump($value['is_active']);
+    echo 
 
-};
+}; */
 
 ?>
 
@@ -49,6 +50,13 @@ foreach ($ads as $key => $value) {
     <title>snack 1 b2</title>
 </head>
 <body>
-    
+    <?php foreach ($ads as $key => $value) : ?>
+        <?php if ($value['is_active'] === true) {?>
+            <div class="adv">
+                <img src="<?=$value['image_path'];?>" alt="">
+                <a href="<?=$value['link'];?>">ADVERTISEMENT N.<?=$key + 1?></a>
+            </div>
+        <?php }; ?>
+    <?php endforeach ?>
 </body>
 </html>
