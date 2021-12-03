@@ -12,7 +12,7 @@ $guests = [Mario, Gigi, Fabio, Pablo, Eleonora, Marco];
 </head>
 <body>
     <h1>PAGE 2</h1>
-    <h2>Invitato: <?= $_GET['guest']; ?></h2>
+    <h2><?php if (in_array($_GET['guest'], $guests)) { echo 'OK';} else { echo 'KO';}  ?></h2>
     <ul>
         <?php foreach ($guests as $i => $guest_name) :?>
             <li><?= $guest_name; ?></li>
