@@ -1,5 +1,5 @@
 <?php
-
+$guests = [Mario, Gigi, Fabio, Pablo, Eleonora, Marco];
 ?>
 
 <!DOCTYPE html>
@@ -12,6 +12,11 @@
 </head>
 <body>
     <h1>PAGE 2</h1>
-    <h2>Invitato: <?= $_GET['guest'] ?></h2>
+    <h2>Invitato: <?= $_GET['guest']; ?></h2>
+    <ul>
+        <?php foreach ($guests as $i => $guest_name) :?>
+            <li><?= $guest_name; ?></li>
+        <?php endforeach; ?>
+    </ul>
 </body>
 </html>
